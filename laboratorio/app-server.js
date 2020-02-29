@@ -10,5 +10,6 @@ const server = http.createServer(requisicao);
 
 const callback = function(){
     console.log('Servidor em funcionamento');
+    
 }
 server.listen(3000, callback);
