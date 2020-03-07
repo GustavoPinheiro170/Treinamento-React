@@ -1,8 +1,8 @@
 //criando o schema
 const restful = require('node-restful');
-const mongoose = restful.mongoose; //referência ao mongoose do restful
+const {Schema} = restful.mongoose; //referência ao mongoose do restful
 //definindo o schema curso
-const cursoSchema = new mongoose.Schema({
+const cursos = new Schema({
  codigo: { type: Number, required: true },
  descricao: { type: String, required: true },
  cargaHoraria: { type: Number, required: true, min: 4 },
@@ -10,4 +10,4 @@ const cursoSchema = new mongoose.Schema({
  categoria: {type: String, uppercase: true,
  enum:['INFORMATICA', 'ENGENHARIA', 'ADMINISTRACAO', 'REDES']}
 });
-module.exports = restful.model('curso', cursoSchema);
+module.exports = restful.model('cursos', cursos);

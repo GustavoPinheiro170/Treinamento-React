@@ -13,3 +13,4 @@ server.use(bodyParser.json());
 server.listen(port, function () {
  console.log(`servidor no ar, na porta ${port}`);
 });
+module.exports = server;
